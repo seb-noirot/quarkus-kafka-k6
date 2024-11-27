@@ -59,3 +59,24 @@ If you want to learn more about building native executables, please consult <htt
   data streaming applications
 - Messaging - Kafka Connector ([guide](https://quarkus.io/guides/kafka-getting-started)): Connect to Kafka with Reactive
   Messaging
+
+## Running k6 Tests for Kafka Processor
+
+### Installing k6 and the k6 extension
+
+To install k6 and the k6 extension, run the following commands:
+
+```shell
+go install go.k6.io/xk6/cmd/xk6@latest
+xk6 build --with github.com/mostafa/xk6-kafka@latest
+```
+
+### Running the k6 Tests
+
+To run the k6 tests for the Kafka processor, use the following command:
+
+```shell
+./mvnw k6:run
+```
+
+This will execute the k6 test scripts located in the `k6-tests` directory.
